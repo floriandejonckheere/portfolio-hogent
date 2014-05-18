@@ -1,0 +1,48 @@
+.site-wrapper {
+	-skrollr-animation-name: bg-animation;
+}
+
+@-skrollr-keyframes bg-animation {
+
+	0 {
+		background-color: rgb(51, 51, 51);
+	}
+
+	500 {
+		background-color: rgb(255,255,255);
+	}
+
+}
+
+#email {
+	-skrollr-animation-name: email-animation;
+}
+
+@-skrollr-keyframes email-animation {
+	0 {
+		opacity: 1;
+		display: block;
+	}
+
+	150 {
+		opacity: 0;
+		display: none;
+	}
+}
+
+#role {
+	-skrollr-animation-name: role-animation;
+}
+
+@-skrollr-keyframes role-animation {
+	0 {
+		opacity: 0;
+		display: none;
+		font-size: 12pt;
+	}
+
+	350 {
+		opacity: 1;
+		display: block;
+	}
+}
