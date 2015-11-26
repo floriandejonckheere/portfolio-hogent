@@ -1,0 +1,13 @@
+a {
+  color: $color-secondary-text;
+
+  text-decoration: none;
+
+  &:visited,
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-secondary-text;
+    text-decoration: underline;
+  }
+}

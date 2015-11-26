@@ -8,7 +8,8 @@ module.exports = function(grunt) {
           },
           dist: {
               files: {
-                  'css/application.css': 'scss/application.scss'
+                  'css/application.css': 'scss/application.scss',
+                  'css/reset.css': 'scss/reset.scss'
               }
           }
       },

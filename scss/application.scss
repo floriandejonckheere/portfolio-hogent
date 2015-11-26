@@ -3,12 +3,23 @@
  *
  * Florian Dejonckheere <florian@floriandejonckheere.be>
  *
+ * This file was generated from SASS source code
+ *
  * */
 
 @import "variables";
+@import "navigation";
+@import "links";
+@import "title";
 
 html,
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
+}
+
+main {
+  padding: $p-lg;
+
+  background-color: $color-secondary;
 }
