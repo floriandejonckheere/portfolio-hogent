@@ -1,0 +1,13 @@
+{
+  "name": "wapps-i-portfolio",
+  "version": "1.0.0",
+  "description": "Web Applications I: Portfolio",
+  "author": "Florian Dejonckheere <florian@floriandejonckheere.be>",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.3.0"
+  }
+}
