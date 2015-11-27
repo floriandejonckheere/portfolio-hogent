@@ -1,0 +1,75 @@
+form > fieldset > div {
+  @include p-y-sm;
+
+  label {
+    display: block;
+    padding-bottom: $spacing-sm;
+  }
+}
+
+.form-control {
+  border: 1px solid $color-button-primary;
+  border-radius: $border-radius;
+
+  padding: $spacing-xs $spacing-sm;
+
+  background: white;
+  color: $color-button-primary-text;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus {
+  border-color: $color-primary;
+}
+
+input[type="button"],
+input[type="submit"] {
+  padding: $spacing-xs $spacing-md;
+
+  &:hover {
+    background: darken(white, 5%);
+  }
+
+  &:active {
+    background: darken(white, 10%);
+  }
+}
+
+
+/** Dropdown **/
+.dropdown {
+  select {
+    outline: none;
+    cursor: pointer;
+
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+}
+
+.dropdown::after {
+  /* $fa-var-caret-down */
+  content: "\f0d7";
+
+  font-family: 'FontAwesome';
+  font-size: $text-sm;
+  color: black;
+
+  position: relative;
+  left: -2em;
+}
+
+/* placeholder override */
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;
+}
+::-moz-placeholder {
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+}
