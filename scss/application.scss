@@ -16,15 +16,26 @@
 
 html,
 body {
+  background-color: $color-secondary;
+
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+
+  min-height: 100vh;
 }
 
 main {
   @include link-color($color-secondary-text);
   @include p-xl;
 
-  background-color: $color-secondary;
+  /* allow main content to fill up all available space */
+  flex-grow: 1;
 }
 
 .icon-bar {

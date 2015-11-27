@@ -29,7 +29,11 @@ module.exports = function(grunt) {
         flatten: true,
         cwd: '.',
         options: {
-          silent: true
+          silent: true,
+          includePath: 'views/partials',
+          filenamePrefix: '_',
+          filenameSuffix: '.html',
+          includeRegex: /^(\s*)\@include\s+"(\S+)"\s*$/
         }
       }
     },
