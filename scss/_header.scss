@@ -1,0 +1,76 @@
+header {
+  @include link-color($color-primary-text, none);
+
+  background: url('../images/banner.jpg') no-repeat;
+  background-size: cover;
+
+  width: 100%;
+
+  nav > ul {
+    @include p-x-lg;
+
+    background-color: rgba(white, 0.3);
+
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    li:first-child {
+      align-self: flex-start;
+    }
+    li:nth-child(2) {
+      margin-left: auto;
+    }
+
+    li > a {
+      @include p-y-lg;
+      @include p-x-md;
+      display: block;
+
+      /* TODO: link color mixin */
+      font-family: 'Montserrat', sans-serif;
+      font-size: $text-md;
+      font-weight: 400;
+    }
+  }
+}
+
+
+header.cover {
+  background: url('../images/background.jpg') no-repeat;
+
+  height: 600px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: center;
+
+  position: relative;
+
+  .cover-title {
+    @include p-lg;
+
+    color: $color-primary-text;
+    font-family: 'Pacifico', sans-serif;
+    font-size: $text-xxl;
+
+    text-align: center;
+  }
+
+  .cover-subtitle {
+    @include p-md;
+
+    color: rgba($color-primary-text, 0.95);
+    font-family: 'Montserrat';
+    font-size: $text-md;
+
+    text-align: center;
+  }
+}

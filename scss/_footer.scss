@@ -1,0 +1,39 @@
+footer {
+  @include link-color($color-tertiary-text);
+  @include p-y-xl;
+
+  background-color: $color-tertiary;
+  color: $color-tertiary-text;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-align: justify;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+  align-items: stretch;
+  justify-content: space-around;
+
+  .footer-block {
+    @include p-x-xl;
+    @include p-y-lg;
+    flex: 1;
+
+    min-width: 25%;
+    @media(max-width: $screen-lg) { min-width: 33%; }
+    @media(max-width: $screen-md) { min-width: 50%; }
+    @media(max-width: $screen-sm) { min-width: 80%; }
+  }
+
+  .footer-block + .footer-block {
+    border-left: 1px solid darken($color-tertiary-text, 30%);
+  }
+
+  h5 {
+    margin-bottom: $spacing-md;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+}

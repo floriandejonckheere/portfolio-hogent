@@ -3,23 +3,34 @@
  *
  * Florian Dejonckheere <florian@floriandejonckheere.be>
  *
- * This file was generated from SASS source code
+ * This file was generated from SCSS source code
  *
  * */
 
 @import "variables";
-@import "navigation";
 @import "links";
-@import "title";
+@import "typography";
+@import "spacing";
+@import "header";
+@import "footer";
 
 html,
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 
 main {
-  padding: $p-lg;
+  @include link-color($color-secondary-text);
+  @include p-xl;
 
   background-color: $color-secondary;
+}
+
+.icon-bar {
+  font-size: $text-lg;
+
+  a {
+    margin-right: $spacing-sm;
+  }
 }

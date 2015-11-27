@@ -1,15 +1,43 @@
-$space-unit: 1rem;
+$spacing-unit: 1rem;
 $text-unit: 1em;
 
 /* padding */
-$p-sm: .5  * $space-unit;
-$p-md: 1   * $space-unit;
-$p-lg: 2   * $space-unit;
-$p-xl: 4   * $space-unit;
+$spacing-sm: .5  * $spacing-unit;
+$spacing-md: 1   * $spacing-unit;
+$spacing-lg: 1.5 * $spacing-unit;
+$spacing-xl: 3   * $spacing-unit;
 
+/* text */
+$text-sm: .75 * $text-unit;
+$text-md: 1   * $text-unit;
+$text-lg: 1.5 * $text-unit;
+$text-xl: 2   * $text-unit;
+$text-xxl: 4   * $text-unit;
 
 /* colours */
 $color-primary: #DC3919;
 $color-primary-text: white;
+
 $color-secondary: #FBFBFB;
 $color-secondary-text: #4A4A4A;
+
+$color-tertiary: #282828;
+$color-tertiary-text: #E1E1E1;
+
+/**
+ * screen sizes derived from twbs
+ *
+ * https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss:84
+ *
+ * */
+
+/* Extra small screen / phone */
+$screen-xs: 0;
+/* Small screen / phone */
+$screen-sm: 544px;
+/* Medium screen / tablet */
+$screen-md: 768px;
+/* Large screen / desktop */
+$screen-lg: 992px;
+/* Extra large screen / wide desktop */
+$screen-xl: 1200px;

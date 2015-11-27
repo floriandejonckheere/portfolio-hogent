@@ -4,7 +4,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
       sass: {
           options: {
-              sourceMap: true
+              sourcemap: "auto",
+              trace: true,
+              style: "expanded",
+              lineNumbers: false
           },
           dist: {
               files: {
@@ -33,13 +36,14 @@ module.exports = function(grunt) {
       copy: {
         main: {
           files: [
-            { expand: true, src: ['images/**'], dest: 'dist/images/' },
+            { expand: true, src: ['images/**/*'], dest: 'dist/' },
           ]
         }
       }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-includes');
   grunt.registerTask('default', ['watch']);
