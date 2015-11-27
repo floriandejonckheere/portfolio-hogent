@@ -12,6 +12,7 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-ftp-deploy": "^0.1.10",
     "grunt-includes": "^0.5.1",
     "load-grunt-tasks": "^3.3.0"
   }

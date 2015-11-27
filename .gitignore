@@ -3,3 +3,4 @@ dist/
 css/
 *.pdf
 .sass-cache/
+.ftppass
