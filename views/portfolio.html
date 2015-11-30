@@ -3,11 +3,216 @@
   <head>
     <title>Florian Dejonckheere - Portfolio</title>
 
-    <!-- fonts -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:400,200,700">
-
-    <link rel="stylesheet" type="text/css" href="css/application.css">
+    include "styles"
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        include "nav"
+      </header>
+
+      <main>
+        <section>
+          <h1>Portfolio</h1>
+          <!-- sadly, inline-block elements take whitespace and linebreaks
+                into account, so please don't place a newline between rows -->
+          <div class="row">
+            <div class="content two columns">
+              <h4>Thalariond</h4>
+              <p class="summary">
+                Written in Ruby and Ruby on Rails, active development
+              </p>
+              <p>
+                Thalariond is a suite of services providing a centralized user management system, which gives the system administrator finegrained control over users and permissions. It consists of a database and a Ruby on Rails applications allowing access to users, permissions, domains and email addresses, as well as an LDAP backend written in plain Ruby. LDAP is the de facto standard for user directories in open source projects as well as enterprise solutions.
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/thalariond/" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+                <a href="https://www.thalarion.be/" class="form-control btn">
+                  <i class="fa fa-globe"></i> Demo
+                </a>
+              </p>
+            </div><div class="content two columns slideshow">
+              <img src="images/thalariond-001.png" alt="thalariond">
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns slideshow">
+              <img src="images/headbanger.png" alt="headbanger">
+            </div><div class="content two columns">
+              <h4>Headbanger</h4>
+              <p class="summary">
+                Written in Ruby on Rails, proof-of-concept
+              </p>
+              <p>
+                Headbanger is a music recommendation and discovery platform.
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/headbanger/" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns">
+              <h4>Fuzzy Car Controller</h4>
+              <p class="summary">
+                Written in Java
+              </p>
+              <p>
+                project-vdb
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/project-vdb/" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </p>
+            </div><div class="content two columns slideshow">
+              <img src="images/project-vdb.png" alt="fuzzy car controller">
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns slideshow">
+              <img src="images/itech-practicum3-001.png" alt="semantic search engine">
+            </div><div class="content two columns">
+              <h4>Semantic Search Engine</h4>
+              <p class="summary">
+                Written in Turtle, JavaScript and Ruby on Rails
+              </p>
+              <p>
+                itech-practicum3
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/itech-practicum3/" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns">
+              <h4>itech-practicum2</h4>
+              <p class="summary">
+                Written in Java
+              </p>
+              <p>
+                itech-practicum2
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/itech-practicum2/" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </p>
+            </div><div class="content two columns slideshow">
+              <img src="images/itech-practicum2.png" alt="itech-practicum2">
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns slideshow">
+              <img src="images/project-soi.png" alt="bust-a-bobble">
+            </div><div class="content two columns">
+              <h4>Bust-a-Bobble</h4>
+              <p class="summary">
+                Written in C++
+              </p>
+              <p>
+                Bust-a-Bobble
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/project-soi/" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns">
+              <h4>Arch User Repository</h4>
+              <p class="summary">
+                Written in Bash
+              </p>
+              <p>
+                Arch User Repository
+                <hr>
+                <a href="https://aur.archlinux.org/packages/?SeB=m&K=Florian" class="form-control btn">
+                  <i class="fa fa-linux"></i> AUR
+                </a>
+              </p>
+            </div><div class="content two columns slideshow">
+              <img src="images/aur.png" alt="aur">
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns slideshow">
+              <img src="images/ruby-ldapserver.png" alt="ruby-ldapserver">
+            </div><div class="content two columns">
+              <h4>ruby-ldapserver</h4>
+              <p class="summary">
+                Written in Ruby, on hold
+              </p>
+              <p>
+                ruby-ldapserver
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/ruby-ldapserver/" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns">
+              <h4>PoweraMPD</h4>
+              <p class="summary">
+                Written in Java, on hold
+              </p>
+              <p>
+                PoweraMPD
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/powerampd" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </p>
+            </div><div class="content two columns slideshow">
+              <img src="images/powerampd-001.png" alt="powerampd">
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns slideshow">
+              <img src="images/skeleton-ui-002.png" alt="skeleton-ui">
+            </div><div class="content two columns">
+              <h4>Skeleton UI</h4>
+              <p class="summary">
+                Written in LESS, on hold
+              </p>
+              <p>
+                skeleton-ui
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/skeleton-ui/" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content two columns">
+              <h4>Tiler</h4>
+              <p class="summary">
+                Written in HTML, CSS and Javascript
+              </p>
+              <p>
+                Tiler
+                <hr>
+                <a href="https://www.github.com/floriandejonckheere/tiler" class="form-control btn">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+                <a href="https://www.floriandejonckheere.be/tiler" class="form-control btn">
+                  <i class="fa fa-globe"></i> Demo
+                </a>
+              </p>
+            </div><div class="content two columns slideshow">
+              <img src="images/tiler.png" alt="tiler">
+            </div>
+          </div>
+        </section>
+      </main>
+
+      include "footer"
+    </div>
   </body>
 </html>
