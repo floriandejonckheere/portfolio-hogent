@@ -1,0 +1,18 @@
+.content {
+  text-align: justify;
+}
+
+.slideshow img {
+  max-width: 100%;
+
+  border: 1px solid $color-button-primary;
+  border-radius: $border-radius;
+}
+
+.summary {
+  font-size: $text-sm;
+  font-style: italic;
+  color: $color-button-primary;
+
+  margin-bottom: $spacing-md;
+}

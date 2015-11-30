@@ -12,6 +12,8 @@ form > fieldset > div {
   border-radius: $border-radius;
 
   padding: $spacing-xs $spacing-sm;
+  margin-right: $spacing-xs;
+  margin-bottom: $spacing-xs;
 
   background: white;
   color: $color-button-primary-text;
@@ -23,8 +25,15 @@ input[type="text"]:focus {
 }
 
 input[type="button"],
-input[type="submit"] {
+input[type="submit"],
+.btn {
   padding: $spacing-xs $spacing-md;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
 
   &:hover {
     background: darken(white, 5%);

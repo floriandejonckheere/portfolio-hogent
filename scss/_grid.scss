@@ -1,0 +1,44 @@
+/**
+ * The grid system uses a four-column layout.
+ *
+ * */
+
+.row {
+  margin-bottom: $spacing-xxl;
+}
+
+.column,
+.columns {
+  display: inline-block;
+
+  vertical-align: top;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* handheld */
+  @include p-sm;
+  &.one   { width: 100%; }
+  &.two   { width: 100%; }
+  &.three { width: 100%; }
+  &.four  { width: 100%; }
+
+  /* tablet */
+  @media only screen and (min-width: $screen-tablet) {
+    @include p-md;
+    &.one   { width: 100%; }
+    &.two   { width: 50%; }
+    &.three { width: 50%; }
+    &.four  { width: 50%; }
+  }
+
+  /* desktop */
+  @media only screen and (min-width: $screen-desktop) {
+    @include p-lg;
+    &.one   { width: 100%; }
+    &.two   { width: 50%; }
+    &.three { width: 33.33%; }
+    &.four  { width: 25%; }
+  }
+}

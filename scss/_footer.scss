@@ -21,9 +21,13 @@ footer {
     flex: 1;
 
     min-width: 25%;
-    @media(max-width: $screen-lg) { min-width: 33%; }
-    @media(max-width: $screen-md) { min-width: 50%; }
-    @media(max-width: $screen-sm) { min-width: 80%; }
+    @media(max-width: $screen-desktop) { min-width: 33%; }
+    @media(max-width: $screen-tablet) { min-width: 50%; }
+    @media(max-width: $screen-mobile) { min-width: 80%; }
+
+    ul {
+      list-style: none;
+    }
   }
 
   .footer-block + .footer-block {

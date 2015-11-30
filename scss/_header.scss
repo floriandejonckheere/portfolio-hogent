@@ -10,6 +10,8 @@ header {
   nav > ul {
     @include p-x-lg;
 
+    list-style: none;
+
     background-color: rgba(white, 0.3);
 
     align-self: flex-start;
