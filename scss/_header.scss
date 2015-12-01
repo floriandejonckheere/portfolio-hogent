@@ -1,8 +1,7 @@
 header {
   @include link-color($color-primary-text, none);
 
-  background: url('../images/banner.jpg') no-repeat;
-  background-size: cover;
+  background: $color-tertiary;
 
   width: 100%;
   height: 64px;
@@ -36,7 +35,6 @@ header {
       @include p-x-md;
       display: block;
 
-      /* TODO: link color mixin */
       font-family: 'Montserrat', sans-serif;
       font-size: $text-md;
       font-weight: 400;
@@ -47,6 +45,7 @@ header {
 
 header.cover {
   background: url('../images/background.jpg') no-repeat;
+  background-size: cover;
 
   height: 600px;
 

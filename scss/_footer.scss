@@ -18,26 +18,28 @@ footer {
   .footer-block {
     @include p-x-xl;
     @include p-y-lg;
-    flex: 1;
 
-    min-width: 25%;
-    @media(max-width: $screen-desktop) { min-width: 33%; }
-    @media(max-width: $screen-tablet) { min-width: 50%; }
-    @media(max-width: $screen-mobile) { min-width: 80%; }
+    @include device(tablet) {
+      &:nth-child(2n) {
+        border-left: 1px solid darken($color-tertiary-text, 30%);
+      }
+    }
+
+    @include device(desktop) {
+      &:not(:first-child) {
+        border-left: 1px solid darken($color-tertiary-text, 30%);
+      }
+    }
 
     ul {
       list-style: none;
     }
-  }
 
-  .footer-block + .footer-block {
-    border-left: 1px solid darken($color-tertiary-text, 30%);
-  }
+    h5 {
+      margin-bottom: $spacing-md;
 
-  h5 {
-    margin-bottom: $spacing-md;
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
   }
 }

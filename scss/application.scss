@@ -44,13 +44,15 @@ main {
 }
 
 .icon-bar {
+  width: 100%;
+
   font-size: $text-lg;
 
-  a {
-    margin-right: $spacing-sm;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 
-    &:hover {
-      opacity: 0.3;
-    }
+  a:hover {
+    opacity: 0.3;
   }
 }
