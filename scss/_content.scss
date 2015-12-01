@@ -1,12 +1,5 @@
-.content {
-  text-align: justify;
-}
-
-.slideshow img {
+.showcase img {
   max-width: 100%;
-
-  border: 1px solid $color-button-primary;
-  border-radius: $border-radius;
 }
 
 .summary {
@@ -15,4 +8,17 @@
   color: $color-button-primary;
 
   margin-bottom: $spacing-md;
+}
+
+img {
+  border-radius: $border-radius;
+}
+
+img.circle {
+  border-radius: 50%;
+}
+
+img.border {
+  border: 5px solid white;
+  box-shadow: 0 0 5px $color-button-primary;
 }

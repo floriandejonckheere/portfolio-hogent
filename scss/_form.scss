@@ -26,8 +26,11 @@ input[type="text"]:focus {
 
 input[type="button"],
 input[type="submit"],
-.btn {
+.btn,
+button {
   padding: $spacing-xs $spacing-md;
+
+  line-height: 1 + (2 * $spacing-md);
 
   &:hover,
   &:active,

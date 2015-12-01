@@ -37,10 +37,21 @@ body {
 
 main {
   @include link-color($color-secondary-text);
-  @include p-md;
+
+  @include device(handheld) { padding: $spacing-md $spacing-lg; }
+  @include device(tablet)   { padding: $spacing-md $spacing-xxl; }
+  @include device(desktop)  { padding: $spacing-md (2 * $spacing-xxl); }
 
   /* allow main content to fill up all available space */
   flex-grow: 1;
+}
+
+section {
+  text-align: justify;
+
+  margin-bottom: $spacing-xxl;
+
+  flex: 1;
 }
 
 .icon-bar {
@@ -55,4 +66,8 @@ main {
   a:hover {
     opacity: 0.3;
   }
+}
+
+p {
+  margin-bottom: $spacing-md;
 }
