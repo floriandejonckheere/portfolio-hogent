@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ['scss/**/*.scss', 'views/**/*', 'images/**/*'],
+        files: ['scss/**/*.scss', 'views/**/*', 'images/**/*', 'files/**/*'],
         tasks: ['sass', 'includes', 'copy']
       }
     },
@@ -41,6 +41,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           { expand: true, src: ['images/**/*'], dest: 'dist/' },
+          { expand: false, src: ['files/**/*'], dest: 'dist/' }
         ]
       }
     },
