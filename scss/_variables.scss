@@ -12,12 +12,17 @@ $spacing-xl: 3   * $spacing-unit;
 $spacing-xxl: 4  * $spacing-unit;
 
 /* text */
-$text-xs: .6 * $text-unit;
+$text-xs: .6  * $text-unit;
 $text-sm: .75 * $text-unit;
 $text-md: 1   * $text-unit;
 $text-lg: 1.5 * $text-unit;
 $text-xl: 2   * $text-unit;
-$text-xxl: 4   * $text-unit;
+$text-xxl: 4  * $text-unit;
+
+/* sizes */
+$size-sm: 3 * $spacing-unit;
+$size-md: 5 * $spacing-unit;
+$size-lg: 7 * $spacing-unit;
 
 /* colours */
 $color-primary: #DC3919;

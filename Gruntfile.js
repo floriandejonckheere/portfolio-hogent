@@ -53,7 +53,7 @@ module.exports = function(grunt) {
           authKey: 'production'
         },
         src: 'dist/',
-        dest: '/www/'
+        dest: '/www/eportfolio/'
       }
     }
   });

@@ -1,6 +1,10 @@
 /**
  * The grid system uses a four-column layout.
  *
+ * Unlike other grid systems, specifying 'two columns'
+ * does NOT mean the element should be two columns wide,
+ * but rather that there are maximum two columns.
+ *
  * */
 
 @mixin device($device) {
@@ -21,9 +25,7 @@
 
   vertical-align: top;
 
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include border-box-sizing;
 
   @include device(handheld) {
     @include p-sm;
