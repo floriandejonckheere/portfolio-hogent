@@ -13,6 +13,7 @@
 @import "utilities";
 
 @import "content";
+@import "nav";
 @import "links";
 @import "typography";
 @import "header";
@@ -50,8 +51,6 @@ section {
   text-align: justify;
 
   margin-bottom: $spacing-xxl;
-
-  flex: 1;
 }
 
 .icon-bar {

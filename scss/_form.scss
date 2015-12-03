@@ -38,8 +38,16 @@ input[type="button"],
 input[type="submit"],
 .btn,
 button {
-  @include device(handheld) { padding: $spacing-md $spacing-xl; }
-  @include device(desktop) { padding: $spacing-xs $spacing-md; }
+  display: inline-block;
+
+  @include device(handheld) {
+    padding: $spacing-md $spacing-xl;
+    line-height: 2;
+  }
+  @include device(desktop) {
+    padding: $spacing-xs $spacing-md;
+    line-height: 1;
+  }
 
   &:hover,
   &:focus {
@@ -94,5 +102,4 @@ textarea {
 :-moz-placeholder           { font-style: italic; }
 ::-moz-placeholder          { font-style: italic; }
 :-ms-input-placeholder      { font-style: italic; }
-
 .dropdown select option::first-child { font-style: italic; }

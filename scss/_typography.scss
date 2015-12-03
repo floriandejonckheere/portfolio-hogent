@@ -23,6 +23,16 @@ ul {
   list-style: disc inside;
 }
 
+/* allow only nested lists to have padding */
+ul,
+ol {
+  ul,
+  ol {
+    padding-left: $spacing-md;
+  }
+}
+
+
 hr {
   @include m-y-lg;
 

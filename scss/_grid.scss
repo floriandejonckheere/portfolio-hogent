@@ -28,7 +28,6 @@
   @include border-box-sizing;
 
   @include device(handheld) {
-    @include p-sm;
     &.one,
     &.two,
     &.three,
@@ -36,7 +35,6 @@
   }
 
   @include device(tablet) {
-    @include p-md;
     &.one   { width: 100%; }
     &.two,
     &.three,
@@ -44,10 +42,17 @@
   }
 
   @include device(desktop) {
-    @include p-lg;
     &.one   { width: 100%; }
     &.two   { width: 50%; }
     &.three { width: 33.33%; }
     &.four  { width: 25%; }
+  }
+
+  &:not(:last-of-type) {
+    @include border-box-sizing;
+
+    @include device(handheld) { padding-right: $spacing-sm; }
+    @include device(tablet) { padding-right: $spacing-md; }
+    @include device(desktop) { padding-right: $spacing-lg; }
   }
 }
