@@ -53,6 +53,10 @@ section {
   margin-bottom: $spacing-xxl;
 }
 
+.inline-image {
+  @include m-x-sm;
+}
+
 .icon-bar {
   width: 100%;
 
