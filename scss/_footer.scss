@@ -19,14 +19,9 @@ footer {
     @include p-x-xl;
     @include p-y-lg;
 
+    /* tablet and up */
     @include device(tablet) {
       &:nth-child(2n) {
-        border-left: 1px solid darken($color-tertiary-text, 30%);
-      }
-    }
-
-    @include device(desktop) {
-      &:not(:first-child) {
         border-left: 1px solid darken($color-tertiary-text, 30%);
       }
     }
