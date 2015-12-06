@@ -4,6 +4,8 @@ This is the ePortfolio, an assignment for Web Applications I. It uses a Grunt bu
 
 The compiled files are available in the `dist` folder.
 
+This site has been developed for Firefox. Any other browser is not (yet) supported.
+
 ## Building
 
 Development:
