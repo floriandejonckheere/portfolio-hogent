@@ -55,7 +55,7 @@ input[type="checkbox"]#menu-toggle {
 
   &:checked {
     & ~ ul { left: 0; }
-    & ~ label { left: calc(100% - 64px); }
+    & ~ #menu-button { left: calc(100% - 64px); }
   }
 }
 

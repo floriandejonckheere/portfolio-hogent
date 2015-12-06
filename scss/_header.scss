@@ -35,5 +35,24 @@ header {
 
       text-align: center;
     }
+
+    /* translucent navbar */
+    $color-translucent: rgba(white, 0.3);
+    @include device(desktop) {
+      nav ul { background-color: $color-translucent; }
+      nav ul li a {
+        background-color: transparent;
+        color: $color-primary-text;
+        &:hover { background-color: $color-translucent; }
+      }
+    }
+
+    /* translucent menu button */
+    @include device(handheld) {
+      input[type="checkbox"]#menu-toggle:not(:checked) ~ #menu-button {
+        color: $color-tertiary;
+        background-color: $color-translucent;
+      }
+    }
   }
 }
