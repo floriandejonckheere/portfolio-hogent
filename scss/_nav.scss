@@ -1,34 +1,100 @@
-nav > ul {
-  @include p-x-lg;
-
+nav ul {
   list-style: none;
 
-  background-color: rgba(white, 0.3);
-
-  align-self: flex-start;
-  position: absolute;
-  top: 0;
   left: 0;
-  right: 0;
+  top: 0;
 
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
+  background-color: $color-tertiary;
 
-  li:first-child {
-    align-self: flex-start;
-  }
-  li:nth-child(2) {
-    margin-left: auto;
-  }
+  width: 100%;
+
+  z-index: 1;
 
   li > a {
     @include p-y-lg;
     @include p-x-md;
     display: block;
 
+    background-color: $color-tertiary;
+    color: $color-tertiary-text;
+
     font-family: 'Montserrat', sans-serif;
     font-size: $text-md;
     font-weight: 400;
   }
+}
+
+#menu-button {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+
+  text-align: center;
+  vertical-align: center;
+
+  background: $color-tertiary;
+  color: $color-tertiary-text;
+
+  cursor: pointer;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  z-index: 2;
+
+  transition: left .3s ease-in;
+
+  &:hover {
+    background-color: lighten($color-tertiary, 10%);
   }
+}
+
+input[type="checkbox"]#menu-toggle {
+  display: none;
+
+  &:checked {
+    & ~ ul { left: 0; }
+    & ~ label { left: calc(100% - 64px); }
+  }
+}
+
+@include device(handheld) {
+  nav ul {
+    position: absolute;
+    left: calc(-100% - 62px);
+    bottom: 0;
+
+    transition: all .3s ease-in;
+
+    li a:hover {
+      background-color: lighten($color-tertiary, 10%);
+    }
+  }
+}
+
+@include device(desktop) {
+  nav > ul {
+    position: absolute;
+    left: 0;
+    bottom: auto;
+
+    transition: none;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    align-self: flex-start;
+
+    li:first-child { align-self: flex-start; }
+    li:nth-child(2) { margin-left: auto; }
+
+    li a:hover {
+      background-color: lighten($color-tertiary, 10%);
+    }
+  }
+
+  /* don't display sliding menu button on desktops */
+  #menu-button { display: none; }
+}

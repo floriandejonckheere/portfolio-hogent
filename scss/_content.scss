@@ -6,14 +6,8 @@
   margin-bottom: $spacing-md;
 }
 
-img {
-  border-radius: $border-radius;
-}
-
-img.circle {
-  border-radius: 50%;
-}
-
+img        { border-radius: $border-radius; }
+img.circle { border-radius: 50%; }
 img.border {
   border: 5px solid white;
   box-shadow: 0 0 5px $color-button-primary;
