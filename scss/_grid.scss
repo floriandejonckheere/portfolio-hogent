@@ -48,11 +48,11 @@
     &.four  { width: 25%; }
   }
 
-  &:not(:last-of-type) {
+  &:not(:first-of-type) {
     @include border-box-sizing;
 
-    @include device(handheld) { padding-right: $spacing-sm; }
-    @include device(tablet) { padding-right: $spacing-md; }
-    @include device(desktop) { padding-right: $spacing-lg; }
+    @include device(handheld) { padding-left: $spacing-sm; }
+    @include device(tablet) { padding-left: $spacing-md; }
+    @include device(desktop) { padding-left: $spacing-lg; }
   }
 }
