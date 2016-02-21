@@ -3,18 +3,18 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     sass: {
-        options: {
-            sourcemap: "auto",
-            trace: true,
-            style: "expanded",
-            lineNumbers: false
-        },
-        dist: {
-            files: {
-                'dist/css/application.css': 'src/scss/application.scss',
-                'dist/css/reset.css': 'src/scss/reset.scss'
-            }
+      options: {
+        sourcemap: "auto",
+        trace: true,
+        style: "expanded",
+        lineNumbers: false
+      },
+      dist: {
+        files: {
+          'dist/css/application.css': 'src/scss/application.scss',
+          'dist/css/reset.css': 'src/scss/reset.scss'
         }
+      }
     },
     watch: {
       css: {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     includes: {
       files: {
         src: ['src/html/*.html'],
-        dest: 'dist'/,
+        dest: 'dist/',
         flatten: true,
         cwd: '.',
         options: {
