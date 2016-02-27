@@ -6,51 +6,26 @@
  * */
 
 @import "variables";
+@import "spacing";
+@import "grid";
+@import "utilities";
+@import "links";
 
-/** Header **/
-header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
+@import "nav";
+@import "typography";
+@import "header";
+/*
+@import "footer";
+*/
+@import "form";
 
-  background-color: $gray;
-  color: white;
+main {
+  @include link-color($color-secondary-text);
 
-  h1 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 4rem;
-    text-transform: uppercase;
+  @include device(handheld) { padding: $spacing-md $spacing-lg; }
+  @include device(tablet)   { padding: $spacing-md $spacing-xxl; }
+  @include device(desktop)  { padding: $spacing-md (2 * $spacing-xxl); }
 
-    padding: 10rem 2rem;
-  }
-
-  nav ul li {
-    display: inline-block;
-
-    padding: 2rem 0;
-    /* dirty little hack */
-    margin-right: -4px;
-
-    a,
-    a:active,
-    a:visited,
-    a:hover {
-      border-top: 1px solid white;
-      color: white;
-
-      font-family: sans-serif;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      padding: 1.25rem 1.5rem;
-    }
-
-    &.active a,
-    a:hover {
-      border-top: 3px solid white;
-    }
-  }
+  /* allow main content to fill up all available space */
+  flex-grow: 1;
 }

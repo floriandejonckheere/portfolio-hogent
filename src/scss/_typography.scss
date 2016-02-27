@@ -1,0 +1,46 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: $spacing-sm;
+}
+
+h1 { font-size: $text-xl; }
+h2 { font-size: $text-lg; }
+h3,
+h4,
+h5,
+h6 {
+  font-size: $text-md;
+  font-weight: 700;
+
+  color: $color-primary;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+/* allow only nested lists to have padding */
+ul,
+ol {
+  ul,
+  ol {
+    padding-left: $spacing-md;
+  }
+}
+
+hr {
+  @include m-y-lg;
+
+  height: 1px;
+  background-color: $color-button-primary;
+  color: $color-button-primary;
+  border: 0;
+}
+
+em {
+  font-style: italic;
+}

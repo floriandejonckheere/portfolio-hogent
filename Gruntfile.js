@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ['src/scss/**/*.scss', 'src/html/**/*', 'src/files/**/*'],
+        files: ['src/scss/**/*.scss', 'src/html/**/*', 'src/files/**/*', 'bower_components/**/*'],
         tasks: ['sass', 'includes', 'copy']
       }
     },
@@ -40,7 +40,9 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { expand: false, src: ['src/files/**/*'], dest: 'dist/' }
+          { expand: false, src: ['src/files/**/*'], dest: 'dist/' },
+          { expand: true, flatten: true, src: ['bower_components/font-awesome/fonts/*'], dest: 'dist/assets/fonts/' },
+          { expand: true, flatten: true, src: ['bower_components/font-awesome/css/*'], dest: 'dist/assets/css/' }
         ]
       }
     }
