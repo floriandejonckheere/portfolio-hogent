@@ -6,3 +6,51 @@
  * */
 
 @import "variables";
+
+/** Header **/
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $gray;
+  color: white;
+
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    text-transform: uppercase;
+
+    padding: 10rem 2rem;
+  }
+
+  nav ul li {
+    display: inline-block;
+
+    padding: 2rem 0;
+    /* dirty little hack */
+    margin-right: -4px;
+
+    a,
+    a:active,
+    a:visited,
+    a:hover {
+      border-top: 1px solid white;
+      color: white;
+
+      font-family: sans-serif;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      padding: 1.25rem 1.5rem;
+    }
+
+    &.active a,
+    a:hover {
+      border-top: 3px solid white;
+    }
+  }
+}
