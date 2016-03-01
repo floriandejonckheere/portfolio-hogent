@@ -14,10 +14,16 @@
 @import "nav";
 @import "typography";
 @import "header";
-/*
 @import "footer";
-*/
 @import "form";
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+
+  min-height: 100vh;
+}
 
 main {
   @include link-color($color-secondary-text);
@@ -28,4 +34,34 @@ main {
 
   /* allow main content to fill up all available space */
   flex-grow: 1;
+
+  .article-info ul {
+    list-style: none;
+
+    width: 100%;
+    text-align: center;
+
+    margin-bottom: $spacing-lg;
+
+    li {
+      @include p-x-md;
+      @include p-y-sm;
+      display: inline-block;
+
+      color: $color-button-primary;
+
+      font-size: $text-sm;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    @include p-x-sm;
+    text-align: justify;
+  }
+
+  @include device(tablet) {
+    width: 60%;
+    margin: auto;
+  }
 }

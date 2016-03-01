@@ -8,6 +8,8 @@ header {
   color: white;
 
   h1 {
+    @include link-color(white, none);
+
     @include p-y-lg;
     @include p-x-md;
     padding-top: 10 * $spacing-unit;

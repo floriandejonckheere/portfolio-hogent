@@ -7,16 +7,20 @@ h6 {
   margin-bottom: $spacing-sm;
 }
 
-h1 { font-size: $text-xl; }
-h2 { font-size: $text-lg; }
-h3,
-h4,
-h5,
-h6 {
-  font-size: $text-md;
+h1 { font-size: $text-xxl; }
+h2 {
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
+  font-size: $text-xxl;
 
-  color: $color-primary;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-secondary-text;
+
+  width: 100%;
+
+  margin-top: $spacing-xl;
+  margin-bottom: $spacing-md;
 }
 
 ul {
