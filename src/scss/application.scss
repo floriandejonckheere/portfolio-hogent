@@ -37,8 +37,11 @@ main {
 }
 
 article {
-  .article-info {
+  @include p-x-sm;
 
+  text-align: justify;
+
+  .article-info {
     padding: $spacing-xl 0;
 
     ul {
@@ -58,11 +61,6 @@ article {
         text-transform: uppercase;
       }
     }
-  }
-
-  p {
-    @include p-x-sm;
-    text-align: justify;
   }
 
   @include device(tablet) {
