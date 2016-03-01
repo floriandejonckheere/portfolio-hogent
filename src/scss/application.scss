@@ -34,24 +34,29 @@ main {
 
   /* allow main content to fill up all available space */
   flex-grow: 1;
+}
 
-  .article-info ul {
-    list-style: none;
+article {
+  .article-info {
 
-    width: 100%;
-    text-align: center;
+    padding: $spacing-xl 0;
 
-    margin-bottom: $spacing-lg;
+    ul {
+      list-style: none;
 
-    li {
-      @include p-x-md;
-      @include p-y-sm;
-      display: inline-block;
+      width: 100%;
+      text-align: center;
 
-      color: $color-button-primary;
+      li {
+        @include p-x-md;
+        @include p-y-sm;
+        display: inline-block;
 
-      font-size: $text-sm;
-      text-transform: uppercase;
+        color: $color-button-primary;
+
+        font-size: $text-sm;
+        text-transform: uppercase;
+      }
     }
   }
 

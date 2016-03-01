@@ -17,5 +17,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-includes": "^0.5.1",
     "load-grunt-tasks": "^3.3.0"
+  },
+  "dependencies": {
+    "jquery": "^2.2.1"
   }
 }

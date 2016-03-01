@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ['src/scss/**/*.scss', 'src/html/**/*', 'src/files/**/*', 'bower_components/**/*'],
+        files: ['src/scss/**/*.scss', 'src/html/**/*', 'src/files/**/*', 'src/js/**/*'],
         tasks: ['sass', 'includes', 'copy']
       }
     },
@@ -41,8 +41,10 @@ module.exports = function(grunt) {
       main: {
         files: [
           { expand: false, src: ['src/files/**/*'], dest: 'dist/' },
+          { expand: true, flatten: true, src: ['src/js/**/*'], dest: 'dist/js/' },
           { expand: true, flatten: true, src: ['bower_components/font-awesome/fonts/*'], dest: 'dist/assets/fonts/' },
-          { expand: true, flatten: true, src: ['bower_components/font-awesome/css/*'], dest: 'dist/assets/css/' }
+          { expand: true, flatten: true, src: ['bower_components/font-awesome/css/*'], dest: 'dist/assets/css/' },
+          { expand: true, flatten: true, src: ['bower_components/jquery/dist/jquery.min.js'], dest: 'dist/assets/js/' }
         ]
       }
     }
