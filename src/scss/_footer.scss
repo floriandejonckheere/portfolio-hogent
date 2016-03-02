@@ -1,0 +1,12 @@
+footer {
+  @include link-color($color-secondary-text);
+  @include p-y-xl;
+
+  width: 100%;
+  text-align: center;
+
+  color: $color-secondary-text;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}

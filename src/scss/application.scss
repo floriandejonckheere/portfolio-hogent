@@ -1,0 +1,70 @@
+/**
+ * minimalist-cover
+ *
+ * Florian Dejonckheere <florian@floriandejonckheere.be>
+ *
+ * */
+
+@import "variables";
+@import "spacing";
+@import "grid";
+@import "utilities";
+@import "links";
+
+@import "nav";
+@import "typography";
+@import "header";
+@import "footer";
+@import "form";
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+
+  min-height: 100vh;
+}
+
+main {
+  @include link-color($color-secondary-text);
+
+  @include device(handheld) { padding: $spacing-md $spacing-lg; }
+  @include device(tablet)   { padding: $spacing-md $spacing-xxl; }
+  @include device(desktop)  { padding: $spacing-md (2 * $spacing-xxl); }
+
+  /* allow main content to fill up all available space */
+  flex-grow: 1;
+}
+
+article {
+  @include p-x-sm;
+
+  text-align: justify;
+
+  .article-info {
+    padding: $spacing-xl 0;
+
+    ul {
+      list-style: none;
+
+      width: 100%;
+      text-align: center;
+
+      li {
+        @include p-x-md;
+        @include p-y-sm;
+        display: inline-block;
+
+        color: $color-button-primary;
+
+        font-size: $text-sm;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @include device(tablet) {
+    width: 60%;
+    margin: auto;
+  }
+}

@@ -3,34 +3,34 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     sass: {
-        options: {
-            sourcemap: "auto",
-            trace: true,
-            style: "expanded",
-            lineNumbers: false
-        },
-        dist: {
-            files: {
-                'dist/css/application.css': 'scss/application.scss',
-                'dist/css/reset.css': 'scss/reset.scss'
-            }
+      options: {
+        sourcemap: "auto",
+        trace: true,
+        style: "expanded",
+        lineNumbers: false
+      },
+      dist: {
+        files: {
+          'dist/css/application.css': 'src/scss/application.scss',
+          'dist/css/reset.css': 'src/scss/reset.scss'
         }
+      }
     },
     watch: {
       css: {
-        files: ['scss/**/*.scss', 'views/**/*', 'images/**/*', 'files/**/*'],
+        files: ['src/scss/**/*.scss', 'src/html/**/*', 'src/files/**/*', 'src/js/**/*'],
         tasks: ['sass', 'includes', 'copy']
       }
     },
     includes: {
       files: {
-        src: ['views/*.html'],
-        dest: 'dist',
+        src: ['src/html/*.html'],
+        dest: 'dist/',
         flatten: true,
         cwd: '.',
         options: {
           silent: true,
-          includePath: 'views/partials',
+          includePath: 'src/html/partials',
           filenamePrefix: '_',
           filenameSuffix: '.html',
           includeRegex: /^(\s*)\@include\s+"(\S+)"\s*$/
@@ -40,8 +40,11 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { expand: true, src: ['images/**/*'], dest: 'dist/' },
-          { expand: false, src: ['files/**/*'], dest: 'dist/' }
+          { expand: true, flatten: true, src: ['src/files/**/*'], dest: 'dist/' },
+          { expand: true, flatten: true, src: ['src/js/**/*'], dest: 'dist/js/' },
+          { expand: true, flatten: true, src: ['bower_components/font-awesome/fonts/*'], dest: 'dist/assets/fonts/' },
+          { expand: true, flatten: true, src: ['bower_components/font-awesome/css/*'], dest: 'dist/assets/css/' },
+          { expand: true, flatten: true, src: ['bower_components/jquery/dist/jquery.min.js'], dest: 'dist/assets/js/' }
         ]
       }
     },

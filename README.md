@@ -1,6 +1,6 @@
 # README
 
-This is the ePortfolio, an assignment for Web Applications I. It uses a Grunt build system in order to compile the SCSS stylesheets. The source HTML files are in the `views` directory, which uses a templating system to insert the headers and footers in each document. The source SCSS files are in the `scss` folder.
+This is the ePortfolio, an assignment for Web Applications I. It uses a Grunt build system in order to compile the SCSS stylesheets. The source HTML files are in the `src/html` directory, which uses a templating system to insert the headers and footers in each document. The source SCSS files are in the `src/scss` folder.
 
 The compiled files are available in the `dist` folder.
 
@@ -22,7 +22,7 @@ $ grunt deploy
 
 ## License
 
-Copyright 2015 Florian Dejonckheere all rights reserved
+Copyright 2016 Florian Dejonckheere all rights reserved
 
 ## Contributing
 
