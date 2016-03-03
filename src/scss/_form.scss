@@ -40,6 +40,10 @@ input[type="submit"],
 button {
   display: inline-block;
 
+  border: 1px solid $color-button-primary;
+
+  font-size: .9 * $text-unit;
+
   @include device(handheld) {
     padding: $spacing-md $spacing-xl;
     line-height: 2;
@@ -59,6 +63,20 @@ button {
   &:focus {
     text-decoration: none;
     background: darken(white, 10%);
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+
+    background: darken(white, 5%);
+    color: darken(white, 20%);
+
+    &:focus,
+    &:active,
+    &:hover {
+      background: darken(white, 5%);
+    }
   }
 }
 
