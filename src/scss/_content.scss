@@ -1,0 +1,39 @@
+article {
+  @include p-x-sm;
+
+  h2 {
+    margin: $spacing-xl 0;
+  }
+
+  h2 ~ ul {
+    list-style: none;
+
+    margin-top: -1 * $spacing-xl;
+    margin-bottom: $spacing-xl;
+
+    width: 100%;
+    text-align: center;
+
+    li {
+      @include p-x-md;
+      @include p-y-sm;
+      display: inline-block;
+
+      color: $color-button-primary;
+
+      font-size: $text-sm;
+      text-transform: uppercase;
+    }
+  }
+
+  @include device(tablet) {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+p {
+  text-align: justify;
+
+  margin-bottom: $spacing-md;
+}

@@ -1,25 +1,27 @@
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-bottom: $spacing-sm;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  color: $color-secondary-text;
+
+  margin-top: $spacing-lg;
+  margin-bottom: $spacing-md;
 }
 
 h1 { font-size: $text-xxl; }
-h2 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: $text-xxl;
+h2 { font-size: $text-xxl; text-align: center; }
+h3 { font-size: $text-xl; }
+h4 { font-size: $text-lg; }
 
-  text-transform: uppercase;
-  text-align: center;
-  color: $color-secondary-text;
-
-  width: 100%;
-}
-
+/**
+ * Lists
+ *
+ * */
 ul {
   list-style: disc inside;
 }
@@ -42,6 +44,5 @@ hr {
   border: 0;
 }
 
-em {
-  font-style: italic;
-}
+em { font-style: italic; }
+strong { font-weight: bold; }
