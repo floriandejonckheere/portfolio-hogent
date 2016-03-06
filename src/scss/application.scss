@@ -18,6 +18,12 @@
 @import "footer";
 @import "form";
 
+html,
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
 .wrapper {
   display: flex;
   flex-flow: column nowrap;
