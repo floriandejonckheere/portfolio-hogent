@@ -1,23 +1,37 @@
 header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   background-color: $color-cover;
   color: white;
 
+  height: 400px;
+
+  &.cover-header {
+    height: 100vh;
+
+    nav {
+      margin-top: 0;
+      margin-bottom: auto;
+
+      padding-top: 7.5 * $spacing-unit;
+    }
+  }
+
   h1 {
     @include link-color(white, none);
 
-    @include p-y-lg;
-    @include p-x-md;
-    padding-top: 10 * $spacing-unit;
-    padding-bottom: 10 * $spacing-unit;
+    margin-top: auto;
 
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     font-size: $text-xxl;
     text-transform: uppercase;
+  }
+
+  nav {
+    margin-top: auto;
   }
 }

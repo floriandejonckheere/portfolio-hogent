@@ -14,6 +14,7 @@
 @import "nav";
 @import "typography";
 @import "header";
+@import "content";
 @import "footer";
 @import "form";
 
@@ -34,37 +35,4 @@ main {
 
   /* allow main content to fill up all available space */
   flex-grow: 1;
-}
-
-article {
-  @include p-x-sm;
-
-  text-align: justify;
-
-  .article-info {
-    padding: $spacing-xl 0;
-
-    ul {
-      list-style: none;
-
-      width: 100%;
-      text-align: center;
-
-      li {
-        @include p-x-md;
-        @include p-y-sm;
-        display: inline-block;
-
-        color: $color-button-primary;
-
-        font-size: $text-sm;
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  @include device(tablet) {
-    width: 60%;
-    margin: auto;
-  }
 }

@@ -1,3 +1,10 @@
+/**
+ * nav.js
+ *
+ * Select correct navigation link
+ *
+ * */
+
 $(document).ready(function() {
   var url = window.location.href.split('/');
   var segment = url[url.length - 1];

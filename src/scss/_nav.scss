@@ -13,13 +13,12 @@ nav ul {
   li > a {
     @include p-y-lg;
     @include p-x-md;
+
     display: block;
 
     background-color: $color-tertiary;
     color: $color-tertiary-text;
 
-    font-family: 'Montserrat', sans-serif;
-    font-size: $text-md;
     font-weight: 400;
     text-decoration: none;
   }
@@ -93,6 +92,8 @@ input[type="checkbox"]#menu-toggle {
 
       @include link-color(white, none);
 
+      border-top: 2px solid transparent;
+
       a,
       a:active,
       a:visited,
@@ -102,14 +103,13 @@ input[type="checkbox"]#menu-toggle {
         background: none;
 
         border-top: 1px solid white;
-
         font-family: sans-serif;
         text-transform: uppercase;
       }
 
-      &.active a,
-      a:hover {
-        border-top: 3px solid white;
+      &.active,
+      &:hover {
+        border-top: 2px solid white;
       }
     }
   }

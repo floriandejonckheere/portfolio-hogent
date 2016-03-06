@@ -40,7 +40,8 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { expand: true, flatten: true, src: ['src/files/**/*'], dest: 'dist/' },
+          { expand: true, flatten: true, src: ['src/robots.txt'], dest: 'dist/' },
+          { expand: true, flatten: true, src: ['src/files/**/*'], dest: 'dist/files/' },
           { expand: true, flatten: true, src: ['src/js/**/*'], dest: 'dist/js/' },
           { expand: true, flatten: true, src: ['bower_components/font-awesome/fonts/*'], dest: 'dist/assets/fonts/' },
           { expand: true, flatten: true, src: ['bower_components/font-awesome/css/*'], dest: 'dist/assets/css/' },
