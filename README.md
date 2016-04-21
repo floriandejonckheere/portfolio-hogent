@@ -11,6 +11,9 @@ This site has been developed for Firefox. Any other browser is not (yet) support
 Development:
 
 ```
+$ bundle install
+$ npm install
+$ bower install
 $ grunt watch
 ```
 
