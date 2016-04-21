@@ -11,6 +11,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
+          'dist/css/fonts.css': 'src/scss/fonts.scss',
           'dist/css/application.css': 'src/scss/application.scss',
           'dist/css/reset.css': 'src/scss/reset.scss'
         }
@@ -40,12 +41,16 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { expand: true, flatten: true, src: ['src/robots.txt'], dest: 'dist/' },
-          { expand: true, flatten: true, src: ['src/files/**/*'], dest: 'dist/files/' },
-          { expand: true, flatten: true, src: ['src/js/**/*'], dest: 'dist/js/' },
-          { expand: true, flatten: true, src: ['bower_components/font-awesome/fonts/*'], dest: 'dist/assets/fonts/' },
-          { expand: true, flatten: true, src: ['bower_components/font-awesome/css/*'], dest: 'dist/assets/css/' },
-          { expand: true, flatten: true, src: ['bower_components/jquery/dist/jquery.min.js'], dest: 'dist/assets/js/' }
+          { expand: true, flatten: true, src: 'src/robots.txt', dest: 'dist/' },
+          { expand: true, cwd: 'src/files/', src: '**', dest: 'dist/files/' },
+          { expand: true, cwd: 'src/js/', src: '**', dest: 'dist/js/' },
+          { expand: true, cwd: 'bower_components/font-awesome/fonts/', src: '**', dest: 'dist/assets/fonts/' },
+
+          { expand: true, cwd: 'bower_components/oswald-googlefont/', src: '*.ttf', dest: 'dist/assets/fonts/' },
+          { expand: true, cwd: 'bower_components/source-sans-pro/fonts/source-sans-pro/', src: '*', dest: 'dist/assets/fonts/' },
+          { expand: true, cwd: 'bower_components/lato/font/', src: '**', dest: 'dist/assets/fonts/' },
+
+          { expand: true, flatten: true, src: 'bower_components/jquery/dist/jquery.min.js', dest: 'dist/assets/js/' }
         ]
       }
     }
