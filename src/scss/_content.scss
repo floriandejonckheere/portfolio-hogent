@@ -1,5 +1,6 @@
 article {
   @include p-x-sm;
+  @include p-y-lg;
 
   h2 {
     margin: $spacing-xl 0;
@@ -9,7 +10,7 @@ article {
     list-style: none;
 
     margin-top: -1 * $spacing-xl;
-    margin-bottom: $spacing-xl;
+    margin-bottom: $spacing-sm;
 
     width: 100%;
     text-align: center;
