@@ -18,6 +18,7 @@ nav ul {
     background-color: $color-tertiary;
     color: $color-tertiary-text;
 
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     text-decoration: none;
   }
@@ -102,7 +103,6 @@ input[type="checkbox"]#menu-toggle {
         background: none;
 
         border-top: 1px solid white;
-        font-family: sans-serif;
         text-transform: uppercase;
       }
 
