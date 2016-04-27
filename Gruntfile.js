@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: ['src/scss/**/*.scss', 'src/html/**/*', 'src/files/**/*', 'src/js/**/*'],
-        tasks: ['sass', 'includes', 'copy']
+        tasks: ['build']
       }
     },
     includes: {
@@ -64,14 +64,31 @@ module.exports = function(grunt) {
         src: 'dist/',
         dest: '/www/eportfolio/'
       }
+    },
+    environments: {
+      production: {
+        options: {
+          host: 'thalarion.be',
+          username: 'florian',
+          agent: process.env.SSH_AUTH_SOCK,
+
+          local_path: 'dist',
+          deploy_path: '/srv/http/eportfolio/',
+          current_symlink: '../floriandejonckheere.be/eportfolio',
+          releases_to_keep: 3
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-ssh-deploy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-includes');
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('deploy', ['ftp-deploy:build']);
+  grunt.registerTask('build', ['sass', 'includes', 'copy']);
+  grunt.registerTask('deploy_ftp', ['build', 'ftp-deploy:build']);
+  grunt.registerTask('deploy_ssh', ['build', 'ssh_deploy:production']);
 }
