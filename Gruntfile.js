@@ -74,7 +74,6 @@ module.exports = function(grunt) {
 
           local_path: 'dist',
           deploy_path: '/srv/http/eportfolio/',
-          current_symlink: '../floriandejonckheere.be/eportfolio',
           releases_to_keep: 3
         }
       }
@@ -89,6 +88,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-includes');
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('build', ['sass', 'includes', 'copy']);
-  grunt.registerTask('deploy_ftp', ['build', 'ftp-deploy:build']);
-  grunt.registerTask('deploy_ssh', ['build', 'ssh_deploy:production']);
+  grunt.registerTask('deploy:ftp', ['build', 'ftp-deploy:build']);
+  grunt.registerTask('deploy:ssh', ['build', 'ssh_deploy:production']);
 }
