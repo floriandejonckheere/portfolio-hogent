@@ -18,9 +18,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-includes": "^0.5.1",
     "grunt-ssh-deploy": "^0.4.1",
-    "load-grunt-tasks": "^3.3.0"
-  },
-  "dependencies": {
+    "load-grunt-tasks": "^3.3.0",
     "grunt-string-replace": "^1.2.1",
     "jquery": "^2.2.1"
   }
