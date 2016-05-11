@@ -1,26 +1,19 @@
 # README
 
-This is the ePortfolio, an assignment for Web Applications I. It uses a Grunt build system in order to compile the SCSS stylesheets. The source HTML files are in the `src/html` directory, which uses a templating system to insert the headers and footers in each document. The source SCSS files are in the `src/scss` folder.
-
-The compiled files are available in the `dist` folder.
-
-This site has been developed for Firefox. Any other browser is not (yet) supported.
+This is the ePortfolio, an assignment for Web Applications I. It was hand-built using Angular, jQuery and a custom CSS microframework. It uses NPM and Bower for dependency management, and Grunt as taskrunner.
 
 ## Building
 
-Development:
-
 ```
-$ bundle install
-$ npm install
-$ bower install
+$ grunt build
+$ darkhttpd dist/ --daemon
 $ grunt watch
 ```
 
-Use the following command to deploy the site to an FTP server
+## Deployment
 
 ```
-$ grunt deploy
+$ ENV=staging grunt deploy
 ```
 
 ## License

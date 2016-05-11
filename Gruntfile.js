@@ -1,5 +1,12 @@
 module.exports = function(grunt) {
-  require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
+  require('load-grunt-tasks')(grunt);
+
+  var env = process.env.ENV || 'development';
+
+  var deploy = require('./deploy.json');
+  deploy['development'] = {
+    'base': 'http://localhost:8080/'
+  };
 
   grunt.initConfig({
     sass: {
@@ -23,71 +30,66 @@ module.exports = function(grunt) {
         tasks: ['build']
       }
     },
-    includes: {
-      files: {
-        src: ['src/html/*.html'],
-        dest: 'dist/',
-        flatten: true,
-        cwd: '.',
-        options: {
-          silent: true,
-          includePath: 'src/html/partials',
-          filenamePrefix: '_',
-          filenameSuffix: '.html',
-          includeRegex: /^(\s*)\@include\s+"(\S+)"\s*$/
-        }
-      }
-    },
     copy: {
       main: {
         files: [
           { expand: true, flatten: true, src: 'src/robots.txt', dest: 'dist/' },
           { expand: true, cwd: 'src/files/', src: '**', dest: 'dist/files/' },
+          { expand: true, cwd: 'src/images/', src: '**', dest: 'dist/assets/images/' },
           { expand: true, cwd: 'src/js/', src: '**', dest: 'dist/js/' },
           { expand: true, cwd: 'bower_components/font-awesome/fonts/', src: '**', dest: 'dist/assets/fonts/' },
 
-          { expand: true, cwd: 'bower_components/oswald-googlefont/', src: '*.ttf', dest: 'dist/assets/fonts/' },
-          { expand: true, cwd: 'bower_components/source-sans-pro/fonts/source-sans-pro/', src: '*', dest: 'dist/assets/fonts/' },
-          { expand: true, cwd: 'bower_components/lato/font/', src: '**', dest: 'dist/assets/fonts/' },
+          { expand: true, cwd: 'bower_components/oswald-googlefont/', src: 'Oswald-{Regular,Light}.ttf', dest: 'dist/assets/fonts/' },
+          { expand: true, cwd: 'bower_components/source-sans-pro/fonts/source-sans-pro/', src: 'source-sans-pro-{light,regular}*', dest: 'dist/assets/fonts/' },
+          { expand: true, cwd: 'bower_components/lato/font/', src: 'lato-bold/*', dest: 'dist/assets/fonts/' },
 
-          { expand: true, flatten: true, src: 'bower_components/jquery/dist/jquery.min.js', dest: 'dist/assets/js/' }
+          { expand: true, flatten: true, src: 'bower_components/jquery/dist/jquery.min.js', dest: 'dist/assets/js/' },
+          { expand: true, flatten: true, src: 'bower_components/angular/angular.min.js', dest: 'dist/assets/js' },
+          { expand: true, flatten: true, src: 'bower_components/angular-route/angular-route.min.js', dest: 'dist/assets/js' },
+          { expand: true, flatten: true, src: 'bower_components/angular-animate/angular-animate.min.js', dest: 'dist/assets/js' }
         ]
       }
     },
-    'ftp-deploy': {
-      build: {
-        auth: {
-          host: 'users.hogent.be',
-          port: 21,
-          authKey: 'production'
-        },
-        src: 'dist/',
-        dest: '/www/eportfolio/'
+    'string-replace': {
+      inline: {
+        files: [
+          { expand: true, cwd: 'src/html/', src: '**', dest: 'dist/' }
+        ],
+        options: {
+          replacements: [
+            {
+              pattern: /%%BASE_PATH%%/g,
+              replacement: deploy[env].base
+            }
+          ]
+        }
       }
     },
     environments: {
-      production: {
+      environment: {
         options: {
           host: 'thalarion.be',
           username: 'florian',
           agent: process.env.SSH_AUTH_SOCK,
 
           local_path: 'dist',
-          deploy_path: '/srv/http/eportfolio/',
+          deploy_path: deploy[env].path,
           releases_to_keep: 3
         }
       }
-    }
+    },
+    clean: ['dist/']
   });
 
-  grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-ssh-deploy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-includes');
-  grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['sass', 'includes', 'copy']);
-  grunt.registerTask('deploy:ftp', ['build', 'ftp-deploy:build']);
-  grunt.registerTask('deploy:ssh', ['build', 'ssh_deploy:production']);
+  grunt.loadNpmTasks('grunt-string-replace');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+
+  grunt.registerTask('build', ['sass', 'copy', 'string-replace']);
+  grunt.registerTask('default', ['clean', 'build', 'watch']);
+
+  grunt.registerTask('deploy', ['clean', 'build', 'ssh_deploy:environment']);
 }

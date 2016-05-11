@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="site">
   <head>
     <title>Florian Dejonckheere</title>
 
-    include "meta"
-    include "styles"
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="cover-header">
-        <h1><a href="index.html">Florian Dejonckheere</a></h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        include "nav"
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/application.css">
+
+    <script type="text/JavaScript" src="assets/js/jquery.min.js"></script>
+
+    <script type="text/JavaScript" src="assets/js/angular.min.js"></script>
+    <script type="text/JavaScript" src="assets/js/angular-route.min.js"></script>
+    <script type="text/JavaScript" src="assets/js/angular-animate.min.js"></script>
+
+    <script type="text/JavaScript" src="js/application.js"></script>
+
+    <base href="%%BASE_PATH%%">
+  </head>
+  <body ng-controller="mainController">
+    <div class="wrapper">
+      <header ng-class="{cover: $route.current.activeTab != 'cover'}">
+        <h1><a href="#/">Florian Dejonckheere</a></h1>
+        <h2>Student Developer</h2>
+
+        <nav>
+          <!-- Responsive menu button -->
+          <input type="checkbox" id="menu-toggle" name="menu-toggle">
+          <label for="menu-toggle" id="menu-button">
+            <i class="fa fa-bars"></i>
+          </label>
+
+          <ul>
+            <li ng-class="{active: $route.current.activeTab == 'about'}"><a href="#about">About me</a></li>
+            <li ng-class="{active: $route.current.activeTab == 'portfolio'}"><a href="#portfolio">Portfolio</a></li>
+            <li ng-class="{active: $route.current.activeTab == 'italent'}"><a href="#italent">I<sup>1</sup>Talent</a></li>
+            <li ng-class="{active: $route.current.activeTab == 'contact'}"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </header>
+
+        <main ng-view ng-hide="cover">
+        </main>
+
+      <footer ng-hide="$route.current.activeTab == 'cover'">
+        <a href="https://florian.dejonckhee.re/">&copy; 2016 Florian Dejonckheere. All rights reserved</a>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,0 +1,6 @@
+{
+  "production": {
+    "path": "/srv/http/eportfolio/",
+    "base": "https://florian.dejonckhee.re/eportfolio"
+  }
+}

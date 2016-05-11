@@ -1,0 +1,15 @@
+@mixin transition {
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+@mixin scale($factor) {
+  -webkit-transform: scale($factor); /* Safari and Chrome */
+  -moz-transform: scale($factor); /* Firefox */
+  -ms-transform: scale($factor); /* IE 9 */
+  -o-transform: scale($factor); /* Opera */
+  transform: scale($factor);
+}

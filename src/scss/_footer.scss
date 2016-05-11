@@ -2,6 +2,8 @@ footer {
   @include link-color($color-secondary-text);
   @include p-y-xl;
 
+position: relative;
+
   width: 100%;
   text-align: center;
 
