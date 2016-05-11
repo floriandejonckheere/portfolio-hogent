@@ -6,3 +6,12 @@
 
 .u-float-right { float: right; }
 .u-float-left { float: left; }
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
