@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 
           local_path: 'dist',
           deploy_path: deploy[env].path,
-          releases_to_keep: 3
+          releases_to_keep: 2
         }
       }
     },
