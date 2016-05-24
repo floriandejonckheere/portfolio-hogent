@@ -125,9 +125,19 @@ $blur-radius: 2px;
         justify-content: space-between;
 
         a {
-          @include p-lg;
+          @include m-sm;
+
+          padding: $spacing-sm $spacing-md;
 
           outline: none;
+
+          border-radius: $border-radius;
+
+          &:hover {
+            background-color: white;
+
+            color: $color-tertiary;
+          }
         }
       }
     }
