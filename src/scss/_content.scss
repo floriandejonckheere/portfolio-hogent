@@ -1,6 +1,6 @@
 article {
   @include p-x-sm;
-  @include p-y-xl;
+  @include p-y-lg;
 
   line-height: 1.25 * $text-unit;
 
@@ -30,7 +30,6 @@ article {
   }
 
   @include device(tablet) {
-    width: 60%;
     margin: auto;
   }
 }
@@ -39,4 +38,6 @@ p {
   text-align: justify;
 
   margin-bottom: $spacing-md;
+
+  padding-left: $spacing-sm;
 }

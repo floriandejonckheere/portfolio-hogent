@@ -128,3 +128,10 @@ input[type="checkbox"]#menu-toggle {
   /* don't display sliding menu button on desktops */
   #menu-button { display: none; }
 }
+
+aside.page-nav {
+  margin-top: $spacing-md;
+
+  width: 100%;
+  text-align: center;
+}

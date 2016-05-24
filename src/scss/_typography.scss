@@ -13,10 +13,10 @@ h6 {
   margin-bottom: $spacing-md;
 }
 
-h1 { font-size: $text-xxl; }
-h2 { font-size: $text-xxl; text-align: center; }
-h3 { font-size: $text-xl; }
-h4 { font-size: $text-lg; }
+h1 { font-size: $text-xxl; line-height: 100%; }
+h2 { font-size: $text-xxl; line-height: 100%; text-align: center; }
+h3 { font-size: $text-xl; line-height: 100%; }
+h4 { font-size: $text-lg; line-height: 100%; }
 
 /**
  * Lists
@@ -26,13 +26,15 @@ ul {
   list-style: disc inside;
 }
 
-/* allow only nested lists to have padding */
+ol {
+  list-style: decimal outside;
+}
+
 ul,
 ol {
-  ul,
-  ol {
-    padding-left: $spacing-md;
-  }
+  padding-left: $spacing-xl;
+
+  margin-bottom: $spacing-md;
 }
 
 hr {
