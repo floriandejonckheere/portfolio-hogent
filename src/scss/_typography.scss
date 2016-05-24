@@ -37,6 +37,10 @@ ol {
   margin-bottom: $spacing-md;
 }
 
+li {
+  margin: $spacing-sm 0;
+}
+
 hr {
   @include m-y-lg;
 
