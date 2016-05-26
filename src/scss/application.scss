@@ -44,3 +44,7 @@ main {
   /* allow main content to fill up all available space */
   flex-grow: 1;
 }
+
+.reduced-width {
+  @include device(desktop)  { max-width: 60%; width: 60%; }
+}
