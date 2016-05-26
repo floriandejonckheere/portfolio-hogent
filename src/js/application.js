@@ -26,6 +26,10 @@ site.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'templates/italent.html',
       activeTab: 'italent'
     })
+    .when('/links', {
+      templateUrl: 'templates/links.html',
+      activeTab: 'links'
+    })
     .when('/contact', {
       templateUrl: 'templates/contact.html',
       activeTab: 'contact'
