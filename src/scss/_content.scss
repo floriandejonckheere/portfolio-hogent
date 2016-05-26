@@ -29,3 +29,17 @@ article {
 
   img { width: 100%; }
 }
+
+img {
+  &.circle { border-radius: 50%; }
+
+  &.border {
+    @include m-lg;
+
+    border: 5px solid white;
+    box-shadow: 0 0 5px #CCC;
+  }
+
+  &.float-left { float: left; }
+  &.float-right { float: right; }
+}

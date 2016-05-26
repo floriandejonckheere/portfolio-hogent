@@ -9,8 +9,22 @@ h6 {
   text-transform: uppercase;
   color: $color-secondary-text;
 
-  margin-top: $spacing-lg;
   margin-bottom: $spacing-md;
+}
+
+h1,
+h2 {
+  margin-top: $spacing-xl;
+}
+
+h3,
+h4 {
+  margin-top: $spacing-xl;
+}
+
+h5,
+h6 {
+  margin-top: $spacing-lg;
 }
 
 h1 { font-size: $text-xxl; line-height: 100%; }
