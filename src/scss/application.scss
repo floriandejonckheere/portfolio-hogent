@@ -37,14 +37,10 @@ body {
 main {
   @include link-color($color-secondary-text);
 
-  @include device(handheld) { padding: $spacing-md $spacing-lg; }
-  @include device(tablet)   { padding: $spacing-md $spacing-xxl; }
-  @include device(desktop)  { padding: $spacing-md (2 * $spacing-xxl); }
+  @include device(handheld) { padding: $spacing-lg 0; }
+  @include device(tablet)   { padding: $spacing-xl 0; }
+  @include device(desktop)  { padding: $spacing-xxl 0; }
 
   /* allow main content to fill up all available space */
   flex-grow: 1;
-}
-
-.reduced-width {
-  @include device(desktop)  { max-width: 60%; width: 60%; }
 }

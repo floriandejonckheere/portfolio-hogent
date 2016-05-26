@@ -1,21 +1,20 @@
 article {
-  @include p-y-lg;
+  margin: 0 auto;
+  padding-bottom: $spacing-xxl;
 
-  margin: $spacing-xl auto;
+  @include device(handheld) { width: 90%; }
+  @include device(tablet)   { width: 80%; }
+  @include device(desktop)  { width: 50%; }
 
-  width: 60%;
 
   line-height: 1.25 * $text-unit;
 
   p {
     text-align: justify;
 
-    margin-bottom: $spacing-md;
     padding-left: $spacing-sm;
 
-    &:first-of-type {
-      margin-top: $spacing-xxl;
-    }
+    &:not(:last-child) { margin-bottom: $spacing-md; }
   }
 
   &:not(:last-child) { border-bottom: 1px solid $color-tertiary-text; }
