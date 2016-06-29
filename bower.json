@@ -1,12 +1,12 @@
 {
-  "name": "minimalist-cover",
-  "description": "Minimalist cover page",
+  "name": "wapps-i-portfolio",
+  "description": "Web Applications I: Portfolio",
   "main": "",
   "authors": [
     "Florian Dejonckheere <florian@floriandejonckheere.be>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/floriandejonckheere/minimalist-cover",
+  "homepage": "https://github.com/floriandejonckheere/wapps-i-portfolio",
   "private": true,
   "ignore": [
     "**/.*",
