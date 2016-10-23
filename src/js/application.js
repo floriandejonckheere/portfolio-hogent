@@ -22,9 +22,13 @@ site.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'templates/portfolio.html',
       activeTab: 'portfolio'
     })
-    .when('/italent', {
-      templateUrl: 'templates/italent.html',
-      activeTab: 'italent'
+    .when('/i1talent', {
+      templateUrl: 'templates/i1talent.html',
+      activeTab: 'i1talent'
+    })
+    .when('/i2talent', {
+      templateUrl: 'templates/i2talent.html',
+      activeTab: 'i2talent'
     })
     .when('/links', {
       templateUrl: 'templates/links.html',
