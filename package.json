@@ -1,11 +1,11 @@
 {
-  "name": "wapps-i-portfolio",
+  "name": "hogent-portfolio",
   "version": "2.0.0",
-  "description": "Web Applications I: Portfolio",
+  "description": "HoGent portfolio",
   "author": "Florian Dejonckheere <florian@floriandejonckheere.be>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/floriandejonckheere/wapps-i-portfolio.git"
+    "url": "https://github.com/floriandejonckheere/portfolio.git"
   },
   "devDependencies": {
     "angular": "^1.5.5",

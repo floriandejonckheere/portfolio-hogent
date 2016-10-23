@@ -1,12 +1,12 @@
 {
-  "name": "wapps-i-portfolio",
-  "description": "Web Applications I: Portfolio",
+  "name": "hogent-portfolio",
+  "description": "HoGent portfolio",
   "main": "",
   "authors": [
     "Florian Dejonckheere <florian@floriandejonckheere.be>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/floriandejonckheere/wapps-i-portfolio",
+  "homepage": "https://github.com/floriandejonckheere/portfolio",
   "private": true,
   "ignore": [
     "**/.*",
