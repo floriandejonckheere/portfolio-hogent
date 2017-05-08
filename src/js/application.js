@@ -52,6 +52,10 @@ site.config(['$routeProvider', '$translateProvider', function($routeProvider, $t
 site.controller('mainController', function($scope, $route, $translate) {
   $scope.$route = $route;
 
+  $scope.$on('$routeChangeStart', function() {
+    document.getElementById('menu-toggle').checked = false;
+  });
+
   $scope.changeLanguage = function (key) {
     $translate.use(key);
   };
