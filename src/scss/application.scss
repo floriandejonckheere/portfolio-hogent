@@ -44,3 +44,23 @@ main {
   /* allow main content to fill up all available space */
   flex-grow: 1;
 }
+
+.i18n {
+  @include device(handheld) { display: none; }
+  @include device(tablet)   { display: block; }
+  @include device(desktop)  { display: block; }
+
+  position: fixed;
+  top: $spacing-sm;
+  right: $spacing-sm;
+
+  a:not(:last-child) {
+    padding-right: $spacing-sm;
+  }
+}
+
+.i18n-menu {
+  @include device(handheld) { display: block; }
+  @include device(tablet)   { display: none; }
+  @include device(desktop)  { display: none; }
+}

@@ -5,10 +5,11 @@
 
 var site = angular.module('site', [
   'ngRoute',
-  'ngAnimate'
+  'ngAnimate',
+  'pascalprecht.translate'
 ]);
 
-site.config(['$routeProvider', function($routeProvider) {
+site.config(['$routeProvider', '$translateProvider', function($routeProvider, $translateProvider) {
   $routeProvider
     .when('/', {
       activeTab: 'cover',
@@ -41,10 +42,19 @@ site.config(['$routeProvider', function($routeProvider) {
     .otherwise({
       redirectTo: '/'
     });
+  $translateProvider.translations('en', en);
+  $translateProvider.translations('nl', nl);
+  $translateProvider.translations('fr', fr);
+  $translateProvider.preferredLanguage('en');
+  $translateProvider.useSanitizeValueStrategy('escape');
 }]);
 
-site.controller('mainController', function($scope, $route) {
+site.controller('mainController', function($scope, $route, $translate) {
   $scope.$route = $route;
+
+  $scope.changeLanguage = function (key) {
+    $translate.use(key);
+  };
 });
 
 site.run(function($rootScope, $location, $anchorScroll) {
