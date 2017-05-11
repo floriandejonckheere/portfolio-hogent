@@ -5,22 +5,42 @@
  *
  * */
 
-aside {
-  display: block;
-  position: absolute;
-  float: left;
+section {
+  aside {
+    display: block;
+    position: absolute;
+    float: left;
 
-  margin-left: -20rem;
-  width: 20rem;
+    margin-left: -20rem;
+    width: 20rem;
 
-  text-align: right;
+    text-align: right;
 
-  h2 {
-    margin: 0;
-    padding-right: 2rem;
+    h2 {
+      margin: 0;
+      padding-right: 2rem;
+    }
+  }
+
+  .links {
+    text-align: right;
+
+    .separator {
+      color: $color-inactive;
+
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 }
 
-section {
-  margin-bottom: 7.5rem;
+.section-divider {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 2px solid $color-accent;
+
+  width: 5rem;
 }
