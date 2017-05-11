@@ -1,24 +1,27 @@
+/**
+ * Site stylesheet
+ *
+ * Florian Dejonckheere <florian@floriandejonckheere.be>
+ *
+ * */
+
+@import "variables";
+@import "grid";
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  font-family: 'EB Garamond', sans-serif;
+  font-size: 1.65em;
+  line-height: 1.4em;
 }
 
-a {
-  color: rgba(#000, 0.7);
+h1 {
+  border-top: 2rem solid $color-accent;
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
-}
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+  margin: 0;
+
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.2em;
 }

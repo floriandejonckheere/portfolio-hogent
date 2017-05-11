@@ -1,0 +1,39 @@
+/**
+ * Responsive design
+ *
+ * Florian Dejonckheere <florian@floriandejonckheere.be>
+ *
+ * */
+
+/* Small screen / phone */
+$screen-mobile: 544px;
+/* Medium screen / tablet */
+$screen-tablet: 768px;
+/* Large screen / desktop */
+$screen-desktop: 992px;
+
+@mixin device($device) {
+  @if $device == handheld {
+    @media only screen and (max-width: $screen-mobile) { @content; }
+  }
+  @else if $device == tablet {
+    @media only screen and (max-width: $screen-tablet) { @content; }
+  }
+  @else if $device == desktop {
+    @media only screen and (max-width: $screen-desktop) { @content; }
+  }
+}
+
+.column {
+  margin-top: 10rem;
+
+  padding-left: 20rem;
+  padding-right: 2rem;
+
+  max-width: 40rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include device(desktop) { padding: 2rem; }
+}
