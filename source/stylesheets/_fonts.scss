@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: local('EB Garamond'), local('EBGaramond'), url('../fonts/EBGaramond-Regular.woff2') format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans'), local('JosefinSans'), url('../fonts/JosefinSans-Regular.woff2') format('woff2');
+}
