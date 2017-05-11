@@ -25,3 +25,54 @@ h1 {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1.2em;
 }
+
+a,
+a:visited,
+a:focus {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  letter-spacing: .08em;
+  font-size: .8em;
+}
+
+a:hover {
+  background-color: $color-link;
+  border-radius: 8px;
+}
+
+.nav {
+  padding-left: 3rem;
+
+  @include device(desktop) {
+    padding-left: 0;
+
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 1rem 2rem;
+
+      a {
+        padding-bottom: .5rem;
+
+        &:hover {
+          background-color: transparent;
+          border-radius: 0;
+
+          border-bottom: 3px solid lighten($color-accent, 30%);
+        }
+      }
+
+      &.active a {
+        border-bottom: 3px solid $color-accent;
+      }
+    }
+  }
+}

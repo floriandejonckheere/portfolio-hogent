@@ -13,6 +13,13 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
+    <nav class="nav">
+      <ul>
+        <li class="active"><%= link_to 'Home', '/index.html' %></li>
+        <li><%= link_to 'Portfolio', '/index.html' %></li>
+        <li><%= link_to 'Contact', '/index.html' %></li>
+      </ul>
+    </nav>
     <div class="column">
       <%= yield %>
     </div>
