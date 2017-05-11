@@ -8,6 +8,7 @@
 @import "variables";
 @import "grid";
 @import "navigation";
+@import "content";
 
 body {
   font-family: 'EB Garamond', sans-serif;
@@ -15,23 +16,38 @@ body {
   line-height: 1.4em;
 }
 
+.stripe {
+  border: 1rem solid $color-accent;
+
+  margin-bottom: 7.5rem;
+}
+
 /**
  * Typography
  *
  */
-h1 {
-  border-top: 2rem solid $color-accent;
+p {
+  margin: 0;
+  padding: 0;
 
-  padding-top: 5rem;
   padding-bottom: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+
+  padding-bottom: 3rem;
 
   font-family: 'Josefin Sans', sans-serif;
-  //line-height: 1.2em;
+}
+
+h1 {
+  line-height: 1.2em;
 }
 
 h2 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 /**
@@ -59,5 +75,8 @@ a:hover {
  *
  */
 ul {
+  padding-top: 0;
+  margin-top: 0;
+
   list-style: none;
 }

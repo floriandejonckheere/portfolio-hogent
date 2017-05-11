@@ -14,15 +14,17 @@
 }
 
 .column {
+  display: block;
+
   margin-top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7.5rem;
 
   padding-left: 20rem;
   padding-right: 2rem;
 
-  max-width: 40rem;
-
-  margin-left: auto;
-  margin-right: auto;
-
   @include mobile { padding: 2rem; }
+
+  max-width: 40rem;
 }

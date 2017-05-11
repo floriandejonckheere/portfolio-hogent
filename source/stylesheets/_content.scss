@@ -1,0 +1,26 @@
+/**
+ * Content
+ *
+ * Florian Dejonckheere <florian@floriandejonckheere.be>
+ *
+ * */
+
+aside {
+  display: block;
+  position: absolute;
+  float: left;
+
+  margin-left: -20rem;
+  width: 20rem;
+
+  text-align: right;
+
+  h2 {
+    margin: 0;
+    padding-right: 2rem;
+  }
+}
+
+section {
+  margin-bottom: 7.5rem;
+}
