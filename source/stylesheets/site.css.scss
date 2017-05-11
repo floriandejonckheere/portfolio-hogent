@@ -42,10 +42,14 @@ a:hover {
   border-radius: 8px;
 }
 
+/**
+ * Navigation
+ *
+ */
 .nav {
   padding-left: 3rem;
 
-  @include device(desktop) {
+  @include mobile {
     padding-left: 0;
 
     text-align: center;
