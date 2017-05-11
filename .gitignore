@@ -1,7 +1,6 @@
-node_modules/
-bower_components/
-dist/
-.sass-cache/
-.ftppass
-*.pdf
-src/files/
+.bundle
+.cache
+.DS_Store
+.sass-cache
+build/
+.idea
