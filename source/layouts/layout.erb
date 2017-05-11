@@ -18,7 +18,7 @@
         <% sitemap.resources.sort_by { |r| r.data.order || 0 }.each do |page| %>
           <% next unless page.data.title %>
           <li class="<%= 'active' if current_page == page %>">
-            <%= link_to page.data.title, page.url %>
+            <%= link_to page.data.title, page.url, :relative => true %>
           </li>
         <% end %>
       </ul>

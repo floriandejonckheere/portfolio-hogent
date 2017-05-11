@@ -9,6 +9,7 @@ end
 
 activate :livereload
 activate :i18n, :langs => %i[en]
+activate :relative_assets
 
 activate :deploy do |deploy|
   deploy.deploy_method = :sftp
