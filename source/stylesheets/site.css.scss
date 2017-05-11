@@ -7,6 +7,7 @@
 
 @import "variables";
 @import "grid";
+@import "navigation";
 
 body {
   font-family: 'EB Garamond', sans-serif;
@@ -14,18 +15,29 @@ body {
   line-height: 1.4em;
 }
 
+/**
+ * Typography
+ *
+ */
 h1 {
   border-top: 2rem solid $color-accent;
 
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
 
-  margin: 0;
-
   font-family: 'Josefin Sans', sans-serif;
-  line-height: 1.2em;
+  //line-height: 1.2em;
 }
 
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.3em;
+}
+
+/**
+ * Links
+ *
+ */
 a,
 a:visited,
 a:focus {
@@ -43,53 +55,9 @@ a:hover {
 }
 
 /**
- * Navigation
+ * Lists
  *
  */
-.nav {
-  padding-left: 3rem;
-
-  @include mobile {
-    padding-left: 0;
-
-    text-align: center;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: .8em;
-
-    li {
-      display: inline-block;
-      padding: 1rem 2rem;
-
-      @include mobile { padding: 1rem 3rem; }
-
-      a {
-        padding-bottom: .5rem;
-
-        &:hover {
-          background-color: transparent;
-          border-radius: 0;
-
-          border-bottom: 3px solid lighten($color-accent, 30%);
-        }
-      }
-
-      &.active a {
-        border-bottom: 3px solid $color-accent;
-      }
-
-      @include desktop {
-        &:not(:last-child):after {
-          content: '/';
-          color: $color-inactive;
-          padding-left: 3rem;
-        }
-      }
-    }
-  }
+ul {
+  list-style: none;
 }
