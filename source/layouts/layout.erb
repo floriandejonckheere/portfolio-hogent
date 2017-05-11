@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title><%= current_page.data.title || 'Florian Dejonckheere' %></title>
+    <title><%= current_page.data.title %> - Florian Dejonckheere</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond|Josefin+Sans" type="text/css">
 
@@ -15,9 +15,12 @@
   <body>
     <nav class="nav">
       <ul>
-        <li class="active"><%= link_to 'Home', '/index.html' %></li>
-        <li><%= link_to 'Portfolio', '/index.html' %></li>
-        <li><%= link_to 'Contact', '/index.html' %></li>
+        <% sitemap.resources.sort_by { |r| r.data.order || 0 }.each do |page| %>
+          <% next unless page.data.title %>
+          <li class="<%= 'active' if current_page == page %>">
+            <%= link_to page.data.title, page.url %>
+          </li>
+        <% end %>
       </ul>
     </nav>
     <div class="column">
