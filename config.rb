@@ -9,6 +9,22 @@ end
 
 activate :livereload
 
+activate :deploy do |deploy|
+  deploy.deploy_method = :sftp
+  deploy.host          = 'florian.dejonckhee.re'
+  if ENV['ENV'] == 'production'
+    deploy.path          = '/srv/http/florian.dejonckhee.re/'
+  else
+    deploy.path          = '/srv/http/staging/florian.dejonckhee.re/'
+  end
+
+  # Optional Settings
+  # deploy.user     = 'tvaughan' # no default
+  # deploy.password = 'secret' # no default
+
+  deploy.build_before = true # default: false
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
