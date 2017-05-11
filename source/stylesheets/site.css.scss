@@ -63,6 +63,8 @@ a:hover {
       display: inline-block;
       padding: 1rem 2rem;
 
+      @include mobile { padding: 1rem 3rem; }
+
       a {
         padding-bottom: .5rem;
 
@@ -76,6 +78,14 @@ a:hover {
 
       &.active a {
         border-bottom: 3px solid $color-accent;
+      }
+
+      @include desktop {
+        &:not(:last-child):after {
+          content: '/';
+          color: $color-inactive;
+          padding-left: 3rem;
+        }
       }
     }
   }
