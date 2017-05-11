@@ -12,7 +12,7 @@ activate :i18n, :langs => %i[en]
 
 activate :deploy do |deploy|
   deploy.deploy_method = :sftp
-  deploy.host          = 'florian.dejonckhee.re'
+  deploy.host          = 'thalarion.be'
   if ENV['ENV'] == 'production'
     deploy.path          = '/srv/http/florian.dejonckhee.re/'
   else
