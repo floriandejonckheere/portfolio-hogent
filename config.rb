@@ -11,6 +11,8 @@ activate :livereload
 activate :i18n, :langs => %i[en]
 activate :relative_assets
 
+set :relative_links, true
+
 activate :deploy do |deploy|
   deploy.deploy_method = :rsync
   deploy.host          = 'thalarion.be'
