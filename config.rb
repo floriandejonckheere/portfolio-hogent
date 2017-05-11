@@ -14,11 +14,7 @@ activate :relative_assets
 activate :deploy do |deploy|
   deploy.deploy_method = :sftp
   deploy.host          = 'thalarion.be'
-  if ENV['ENV'] == 'production'
-    deploy.path          = '/srv/http/florian.dejonckhee.re/'
-  else
-    deploy.path          = '/srv/http/staging/florian.dejonckhee.re/'
-  end
+  deploy.path          = '/srv/http/eportfolio/'
 
   # Optional Settings
   # deploy.user     = 'tvaughan' # no default
