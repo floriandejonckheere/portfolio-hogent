@@ -47,6 +47,7 @@ h1 {
 }
 
 h2 {
+  line-height: 1.4em;
   font-size: 1.2em;
 }
 
@@ -68,6 +69,19 @@ a:focus {
 a:hover {
   background-color: $color-link;
   border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a:hover {
+    background-color: transparent;
+  }
+
+  // Permalink
+  &:hover a:before {
+    content: '#';
+    color: darken($color-inactive, 10%);
+    padding-right: 1rem;
+  }
 }
 
 /**

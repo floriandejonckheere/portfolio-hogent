@@ -57,6 +57,12 @@ page '/*.txt', :layout => false
 #   end
 # end
 
+helpers do
+  def permalink_for(name)
+    "<a href=\"\##{name.parameterize}\" id=\"#{name.parameterize}\">#{name}</a>"
+  end
+end
+
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 

@@ -13,14 +13,18 @@ section {
       float: left;
 
       margin-left: -1 * $content-offset;
+      padding-right: $content-offset;
       width: $content-offset;
 
       text-align: right;
     }
 
     h2 {
-      margin: 0;
       padding-right: 2rem;
+
+      @include desktop {
+        padding-left: $content-offset / 3;
+      }
     }
 
     em {
