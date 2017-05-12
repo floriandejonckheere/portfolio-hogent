@@ -12,8 +12,8 @@ section {
       position: absolute;
       float: left;
 
-      margin-left: -20rem;
-      width: 20rem;
+      margin-left: -1 * $content-offset;
+      width: $content-offset;
 
       text-align: right;
     }

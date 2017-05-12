@@ -5,6 +5,9 @@
  *
  * */
 
+// Left offset for content text
+$content-offset: 30vw;
+
 @mixin mobile {
   @media only screen and (max-width: 1000px) { @content; }
 }
@@ -21,7 +24,7 @@
   margin-right: auto;
   margin-bottom: 5rem;
 
-  padding-left: 20rem;
+  padding-left: $content-offset;
   padding-right: 2rem;
 
   @include mobile { padding: 2rem; }
