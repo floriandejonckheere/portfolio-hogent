@@ -14,7 +14,7 @@
     <nav class="nav">
       <ul>
         <% sitemap.resources.sort_by { |r| r.data.order || 0 }.each do |page| %>
-          <% next unless page.data.title %>
+          <% next unless page.data.title.present? && page.metadata[:options][:locale] == I18n.locale %>
           <li class="<%= 'active' if current_page == page %>">
             <%= link_to page.data.title, page.url %>
           </li>

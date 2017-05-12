@@ -8,7 +8,7 @@ activate :autoprefixer do |prefix|
 end
 
 activate :livereload
-activate :i18n, :langs => %i[en]
+activate :i18n, :langs => %i[en nl fr]
 activate :relative_assets
 
 set :relative_links, true
