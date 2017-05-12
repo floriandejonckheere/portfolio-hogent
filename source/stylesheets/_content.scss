@@ -7,14 +7,16 @@
 
 section {
   aside {
-    display: block;
-    position: absolute;
-    float: left;
+    @include desktop {
+      display: block;
+      position: absolute;
+      float: left;
 
-    margin-left: -20rem;
-    width: 20rem;
+      margin-left: -20rem;
+      width: 20rem;
 
-    text-align: right;
+      text-align: right;
+    }
 
     h2 {
       margin: 0;

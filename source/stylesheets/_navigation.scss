@@ -24,12 +24,17 @@
 
     li {
       display: inline-block;
-      padding: 1rem 2rem;
 
-      @include mobile { padding: 1rem 3rem; }
+      padding-top: 1rem;
+
+      @include mobile {
+        padding-top: 3rem;
+      }
 
       a {
-        padding-bottom: .5rem;
+        padding: 1rem 2rem;
+
+        @include mobile { padding: 1rem 3rem; }
 
         &:hover {
           background-color: transparent;
@@ -44,6 +49,8 @@
       }
 
       @include desktop {
+        padding-left: 2rem;
+
         &:not(:last-child):after {
           content: '/';
           color: $color-inactive;
