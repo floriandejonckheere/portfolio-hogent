@@ -5,10 +5,10 @@
  *
  * */
 
-/**
- * Colors
- *
- */
+// Colors
 $color-accent: #FBC547;
-$color-link: rgba(251, 197, 71, 0.2);
+$color-link: transparentize($color-accent, .8);
 $color-inactive: darken(white, 10%);
+
+// Left offset for content
+$content-offset: 25vw;

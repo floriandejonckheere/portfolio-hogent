@@ -5,6 +5,28 @@
  *
  * */
 
+.column {
+  display: block;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  padding: 2rem;
+
+  max-width: 40rem;
+
+  @include desktop {
+    padding-left: $content-offset;
+
+    margin-top: 5rem;
+  }
+
+  .stripe {
+    border: 1rem solid $color-accent;
+    margin-bottom: 7.5rem;
+  }
+}
+
 section {
   aside {
     @include desktop {
