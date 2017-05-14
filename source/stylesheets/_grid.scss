@@ -19,15 +19,16 @@ $content-offset: 30vw;
 .column {
   display: block;
 
-  margin-top: 10rem;
-  margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5rem;
+  margin-left: auto;
 
-  padding-left: $content-offset;
-  padding-right: 2rem;
-
-  @include mobile { padding: 2rem; }
+  padding: 2rem;
 
   max-width: 40rem;
+
+  @include desktop {
+    padding-left: $content-offset;
+
+    margin-top: 5rem;
+  }
 }
