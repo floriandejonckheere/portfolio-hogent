@@ -70,11 +70,33 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
   }
 
-  // Permalink
-  &:hover a:before {
-    content: '#';
-    color: darken($color-inactive, 10%);
-    padding-right: 1rem;
+  // Desktop has hash before title
+  @include desktop {
+    a:before {
+      content: '#';
+      color: transparent;
+
+      position: absolute;
+      margin-left: -2rem;
+    }
+
+    &:hover a:before {
+      color: darken($color-inactive, 10%);
+    }
+  }
+
+  // Mobile has hash after title
+  @include mobile {
+    a:after {
+      content: '#';
+      color: transparent;
+
+      margin-left: 1rem;
+    }
+
+    &:hover a:after {
+      color: darken($color-inactive, 10%);
+    }
   }
 }
 
