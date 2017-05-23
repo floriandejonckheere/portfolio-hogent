@@ -23,7 +23,7 @@
     </nav>
     <div class="column">
       <hr class="stripe">
-      <%= yield %>
+<%= yield.gsub(/^/, '      ') %>
     </div>
   </body>
 </html>
