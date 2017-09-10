@@ -1,7 +1,15 @@
 # README
 
-This is the ePortfolio, an assignment for Web Applications I. It was hand-built using Angular, jQuery and a custom CSS microframework. It uses NPM and Bower for dependency management, and Grunt as taskrunner.
+This is the source code to my portfolio.
 
+## Setup
+
+Install RVM and Ruby first
+
+```
+$ gem install bundler --no-ri --no-rdoc
+$ bundle install
+```
 ## Setup
 
 ```
@@ -10,22 +18,18 @@ $ rvm gemset create $(cat .ruby-gemset)
 $ rvm use $(cat .ruby-version)-$(cat .ruby-gemset)
 $ gem install bundler
 $ bundle install
-$ npm install
-$ bower install
 ```
 
 ## Building
 
 ```
-$ grunt build
-$ darkhttpd dist/ --daemon
-$ grunt watch
+$ middleman
 ```
 
 ## Deployment
 
 ```
-$ ENV=staging grunt deploy
+$ middleman deploy
 ```
 
 ## License
